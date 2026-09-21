@@ -21,5 +21,6 @@ const calculateClick = () => {
 
 $(document).ready(function() {
     $("#calculate").click(calculateClick);
+    $(document).on("keydown", (ev) => { if (ev.key === "Enter") calculateClick() })
     $("#investment").focus();
 });
